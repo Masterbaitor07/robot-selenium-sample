@@ -1,19 +1,27 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
-- master
+  - main  # Runs when changes are pushed to 'main' branch
 
 pool:
-  name: Default
+  name: Default  # Uses your self-hosted agent
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+  - script: |
+      python -m venv venv
+      call venv\Scripts\activate  # For Windows
+      pip install -r requirements.txt
+    displayName: "Set up Python Virtual Environment & Install Dependencies"
+    condition: succeededOrFailed()
 
-- script: |
-    
-    pabot --processes 2 --output NONE --report NONE --log NONE --variable browserName:MicrosoftEdge --variable version:latest --variable ROBOT_BROWSER:Edge .
-  displayName: 'Run a multi-line script'
+  - script: |
+      call venv\Scripts\activate  # Activating virtual environment
+      pabot --processes 2 --output output.xml --report report.html --log log.html --variable browserName:MicrosoftEdge --variable version:latest --variable ROBOT_BROWSER:Edge .
+    displayName: "Run All Robot Tests with Pabot (Parallel Execution)"
+    condition: succeededOrFailed()
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: '**/output.xml'
+      mergeTestResults: true
+      testRunTitle: "Robot Framework Tests"
+    condition: always()
+    displayName: "Publish Test Results"
