@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Run Selenium Tests With Robot On LambdaTest
 
 ![171934563-4806efd2-1154-494c-a01d-1def95657383 (1)](https://user-images.githubusercontent.com/70570645/172273386-fa9606ac-3e63-4b2e-8978-3142add3e038.png)
@@ -173,3 +174,6 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
 * Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=robot-selenium-sample)
 * For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=robot-selenium-sample)
 
+=======
+# robot-selenium-sample
+>>>>>>> 5e4d43cae8006525204a50e6940465497f60816c
