@@ -67,8 +67,8 @@ Make sure you have your LambdaTest credentials with you to run test automation s
   ```
   * For **Windows**:
   ```bash
-  set LT_USERNAME="YOUR_USERNAME" 
-  set LT_ACCESS_KEY="YOUR ACCESS KEY"
+  set LT_USERNAME=anshulr
+  set LT_ACCESS_KEY=LT_Vafdmse65NnAXvVWbRuR6d0Z9Qj7xq1e9AUI2qpbgK8vamb
   ```
 
 ## Run Your First Test

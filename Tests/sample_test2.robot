@@ -22,5 +22,5 @@ Example of connecting to Lambdatest via Robot Framework
 	${response}    Get Text    xpath=/html/body/div/div/div/ul/li[6]/span
 	Should Be Equal As Strings    ${response}    Yey Let's add it to list
 
-# pabot --processes 2 --output NONE --report NONE --log NONE --variable browserName:MicrosoftEdge --variable version:latest --variable ROBOT_BROWSER:Edge Tests/
+# pabot --processes 2 --output NONE --report NONE --log NONE --variable browserName:MicrosoftEdge --variable version:latest --variable ROBOT_BROWSER:Edge .
 # robot  --output NONE --report NONE --log NONE --variable browserName:MicrosoftEdge --variable version:latest --variable ROBOT_BROWSER:Edge Tests/sample_test.robot

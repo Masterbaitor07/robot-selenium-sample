@@ -1,0 +1,6 @@
+datasources:81ac1800847bbeb2bdf87acfc427afc8efbeac26
+commandlineoptions:1df2af63994204ec592388ce439501942c6503c1
+suitesfrom:no-suites-from-option
+file:c1dad0fc5a3c90874dbb8e19f5be0824e60fe95a
+--suite Tests.Sample Test
+--suite Robot-Selenium-Sample.Tests.Sample Test2
